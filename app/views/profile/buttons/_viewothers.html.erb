@@ -1,0 +1,35 @@
+<!-- Buttons to display other artist profile-->
+<!-- Do not render collaborate button once a request has been made. -->
+
+<!-- View buttons iff logged in. -->
+<% if session['logged_in'] == 1 %>
+<div class="coll-btn row">
+	<% if Collaboration.where(first_id:session['user_id'], second_id:@otherID).count == 0 %>
+		<%= render 'profile/buttons/collaborateButton' %>
+	<% elsif Collaboration.where(first_id:session['user_id'], second_id:@otherID, approved:false).count >= 1 %>
+		<button class="btn profile-btn btn-warning">Request Sent</button>
+	<% else %>
+		<button class="btn profile-btn btn-success">Request Accepted</button>
+	<% end %>
+</div>	
+<div class="foll-btn row">
+	<% if @amFollowing == true %>
+  		<%= render 'profile/buttons/unfollowButton' %>
+	<% else %>
+  		<%= render 'profile/buttons/followButton' %>
+	<% end %>
+</div>  
+<% end %>
+<div class="donate-btn row">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="paypal">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="<%=User.find_by(id:@otherID).payment_email%>">
+    <input type="hidden" name="lc" value="AU">
+    <input type="hidden" name="currency_code" value="AUD">
+    <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+    <button class="btn profile-btn btn-info">Donate (PayPal)
+    <input type="hidden" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif" border="0" name="submit" 
+    	   alt="PayPal — The safer, easier way to pay online."> 
+    </button>   
+  </form>
+</div>

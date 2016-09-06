@@ -1,0 +1,110 @@
+/* Profile page Css*/
+.description {
+	margin-top: 10px;
+}
+.profile-btn {
+	margin-top: 10px;
+	margin-left: 0;			
+}
+
+.content-img {	
+	height: 200px;
+}
+
+.coll-img, .foll-img{
+	height: 90px;
+}
+
+.artist-image {
+	max-width: 200px;
+	max-height: 500px;
+}
+
+.artist-name {
+	margin-left: 10px;
+}
+
+.nav-tabs {
+	margin-bottom: 35px;
+}
+
+.element {
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+.info {
+	padding: 0;
+	margin: 0;
+}
+
+.content-info {
+	padding: 0;
+	margin: 0;
+}
+
+.projects {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+textarea { 
+	resize: vertical; 
+}
+
+.modal {
+	margin-top:50px;
+}
+
+.website {    
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+select {
+	width:490px;
+	height:40px;
+}
+
+form {
+	text-align: left;
+}
+
+#payment_email_outcome {
+	color:red;
+	margin-left:80px;
+	margin-top:5px;
+}
+
+/**************************************************************************/
+
+#search_box {
+	position: relative;
+	top: 10px;
+	right: 30%;
+	width: 200px;
+}
+
+.playtrack {
+  height:27px; 
+  width:27px;
+}
+
+.comment{
+  height:30px; 
+  width:30px;   
+}
+
+.star-rating {
+	height: 20px;
+}
+.rating {
+	width:100px;
+}
+.foll-image{
+	max-height: 100px;
+}
+#track-outcome ,.track-edit-outcome {
+	color:red;
+	font-size:12px;
+}

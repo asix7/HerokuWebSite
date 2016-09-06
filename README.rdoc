@@ -1,0 +1,57 @@
+= HitPlayShare
+
+Website-link: mixtape-district.herokuapp.com
+
+==Description
+An application to help new artists gain recognition and develop a fanbase. Allows musicians to upload music, and fans to download music, stream music, and rate music.
+
+==The technologies we used:
+* Ruby On Rails
+* HTML 5
+* CSS 3
+* Javascript
+* Jquery
+* Bootstrap
+* Notify.js
+* AJAX
+
+==Application specifications:
+* Ruby version: 4.1
+
+* Database used: Development => MySQL, Deployment => Postgres 3
+
+* Initialization: Run these commands in order to initialize this application:
+1. bundle install
+2. rake db:drop
+3. rake db:create
+4. rake db:migrate
+5. rails s
+
+==Directory structure (Important folders & files only):
+* app -> Contains our rails application
+* config -> routes.rb (contains the routing logic for our application). 
+* db -> schema.rb (specifies the data model powering this application), migrate -> contains all the migrations we used to build the schema.
+* public -> Contains all uploaded/static files and music.
+* test -> Contains our test cases for controllers and models.
+* vendor -> Contains the JPlayer library
+* Gemfile -> Contains all the gems used in this application
+
+==Directory structure of the app folder (Important folders & files only):
+* assets -> Contains all the CSS (Inside the stylesheets folder) and Javascript (Inside the javascripts folder) for our website.
+* controllers -> Contains all the logic of our application. These are responsible for responding to a specific request (as specified in routes.rb), performing the logic of the application and rendering the appropriate view/return XML/test
+* models -> Contains multiple classes which map to tables within the database (ORM using ActiveRecordAssociation). This represents the data layer of our application.
+* views -> Mainly contain the presentation logic of our application. Folder names correspond to controller names (The controller with the name of the folder renders a view from that folder). Includes stylesheets & javascript from the assets folder.
+
+
+==ADDITIONAL INFORMATION REGARDING RAILS:
+* For people who are new to rails, controllers contain actions (class methods) which selects the view (html page etc.) to be displayed to the user.
+* How actions work : if no URL is specified after the function call, the controller selects a view (html page)which matches the name of the action itself.
+* Eg. redirect_to url_for(:controller => :home, :action => :showHome) is a function called in actions of the controller which redirects user to another action of another controller. In this way, we can redirect users to specific routes.
+* For the views folder, some pages are broken into sub-html.erb files for instance, 'buttons', 'forms', 'navigation bars' and these sub-sections are sometimes called with <%= render PAGE %> tag.
+
+To view the our entire project files, you can also go to https://github.com/MixtapeDistrict/server
+
+
+
+
+

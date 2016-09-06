@@ -1,0 +1,36 @@
+<% if session['logged_in']==1 %>
+	<%= render 'navbar_logged'%>
+<% else %>
+	<%= render 'navbar'%>
+<% end %>
+<!-- All the content on the homepage -->
+<div id="content" class="container-fluid">
+
+	<div class="container">	
+		<div class="main row">
+			<div class="row grind">                      
+			</div>
+		</div>
+	</div>
+	
+	<% if session['logged_in'] == 1 %>
+		<div class="row playlist">
+			<div class="col-md-9 my-playlist">
+				<div class="gallery">
+					<div id="carousel">
+						<!-- Image is added here. -->
+
+					</div>
+
+						<button type="button" id="previous" class="btn btn-default ss-icon" onclick="galleryspin('-')"><b>&lt;</b></button>
+						<button type="button" id="next" class="btn btn-default ss-icon" onclick="galleryspin('')"><b>&gt;</b></button>
+						<button type="button" id="random" style="bottom: -70px;left:43%;" class="btn btn-default ss-icon" onclick="shuffle()"><b>Shuffle Playlist</b></button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	<% end %>
+
+
+</div>

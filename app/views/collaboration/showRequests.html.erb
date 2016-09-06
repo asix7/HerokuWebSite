@@ -1,0 +1,48 @@
+<!-- NOTE: this page is only viewable iff the user the logged in. 
+	Shows all collaborations with current user.
+-->
+<% if session['logged_in'] == 1 %>
+	<%= render 'navbar_others' %>
+<% else %>
+	<%= render 'navbar_unlogged' %>
+<% end %>
+
+<div id="content" class="container-fluid">
+	<div class="container results">
+		<h2> All requests from other users </h2>
+
+		<% for i in 0..@num-1 %>
+		<div class="col-md-4 col-sm-6 clearfix">
+			<div class="col-md-6 col-sm-6 content-img" heigh="175px">
+				<% if User.find(@requester_ids[@num-1-i]).image_path.nil? == false %>
+		      		<%= image_tag("userimage/#{User.find(@requester_ids[@num-1-i]).image_path}", 
+		      			class:"img-thumbnail", alt:"User image") %>
+		      	<% else %>
+		      		<!-- Select at random default picture. -->
+		      		<% index = rand(0..3) %>
+		      		<% files = ['yellow.jpg', 'blue.jpg', 'green.jpg', 'red.jpg'] %>
+		      		<%= image_tag("userimage/#{files[index]}", class:"img-thumbnail",  alt:"User image") %>
+		      	<% end %>
+	    	</div>
+			<div class="col-md-6 col-sm-6 content-info">
+				<%= form_tag({:controller => 'collaboration', :action => 'acceptRequest'}, method: "post") do %>
+				<%= hidden_field_tag(:id, @requester_ids[@num-1-i]) %>
+				<% if Collaboration.find_by(first_id:@requester_ids[@num-1-i], second_id:@userID).approved %>
+				<p class="h4 row info"> Accepted : <%= link_to User.find(@requester_ids[@num-1-i]).username,
+				   controller:"profile", action:"showOther", :id => @requester_ids[@num-1-i] %></p>
+				<% else %>
+				<p class="h4 row info"> Not yet accepted </p>
+				<p ><%= @messages[@num-1-i] %></p>
+				<%= submit_tag("Accept #{@names[@num-1-i]}", :class => 'btn btn-success') %>
+				<% end %>
+				<% end %>
+				<br>
+		  	</div>
+	    </div>
+		<% end %>
+	</div>
+</div>
+
+
+
+

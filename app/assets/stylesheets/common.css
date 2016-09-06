@@ -1,0 +1,170 @@
+/* Common css for site */
+
+/*Css for footer to work*/
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+#wrapper {
+   min-height:100%;
+   position:relative;
+}
+
+#content{
+   padding:10px;
+   padding-bottom:100px;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+/*Navigation Bar Fixes*/
+.navbar-brand {
+	width: 150px;
+}
+
+.navbar-form {
+  margin: 0;
+}
+
+.btn-search{
+   margin-top: 8px !important;  
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   height: 72px;  		/* depends on the content */
+   width:100%;
+   padding:0;
+   margin: 0;
+   background-color:#E6E9EB; 
+   text-align: center;
+}
+
+/* Footer content */
+#about{
+	width: 98%; 		/* avoids overflow*/
+	position: absolute;
+    left: 0;
+    text-align: center;   
+}
+
+/* Sing up and Log in */
+form {
+	text-align:center;
+}
+
+#signUp, #logIn {
+	padding: 10px;
+	width: 225px;
+}
+
+.sign-form {
+	margin-bottom: 5px;
+}
+
+#email-message {
+	color:red;
+	text-align:center;
+}
+#password-message {
+	color:red;
+	text-align:center;
+}
+#username-message {
+	color:red;
+	text-align:center;
+}
+
+#login-message {
+	color:red;
+	text-align:center;
+}
+.log-out {
+	margin-left:0;
+  margin-top: 8px !important; 
+}
+
+.followers{
+  position: relative;
+  left: 30%;
+}
+.playtrack-search {
+  height:27px; 
+  width:27px;
+}
+.comment-search {
+	height:27px;
+	width:27px;
+}
+
+/**************************************************/
+
+.modal.modal-wide .modal-dialog {
+  position: relative;
+  width: 250px;
+  margin-right: 10%;
+  margin-top: 0.5%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+.line {
+  display: block;
+  height: 1px;
+  width: 220px;
+  border: 5px;
+  border-top: 1px solid;
+}
+.quicklaunch_playlist {
+	padding:8px;
+}
+.quicklaunch_playlist > ul > li > a:hover {
+	background-color:white;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#playlist_quick_launcher{
+  width: 175px;
+}
+
+.delete_image{
+  width:15px;
+  height: 15px;
+  position: absolute;
+  top: 2px;
+}
+.remove-playlist{
+  padding: 0;
+}
+
+.play-list-song{
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;  
+}
+
+.presentation{
+  padding: 5px;
+}
+
+.comment-btn{
+  margin-top: 10px;
+}
+
+.user-avatar{
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.notifyjs-container {
+ 	margin-left:300px !important;
+}
