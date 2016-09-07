@@ -1,7 +1,7 @@
-/* Homepage specific css */ 
+/* Homepage specific css */	
 
 .main {
-  padding-bottom: 40px;
+	padding-bottom: 40px;
 }
 
 #content{
@@ -12,29 +12,29 @@ body{
     overflow-x:hidden;
 }
 .refresh{
-  height: 20px;
+	height: 20px;
 }
 
 #track{
-  position:absolute;
-    width: 100%;
+	position:absolute;
+  	width: 100%;
     height: 100%;
     padding-right: 5px;
     padding-left: 5px;
 }
 #track-comment {
-  position:absolute;
-  width:180px;
-  height:180px;
+	position:absolute;
+	width:180px;
+	height:180px;
 }
 
 .element{
-    float:left;
-    width: 15%;
-    margin: 10px;
+  	float:left;
+  	width: 15%;
+  	margin: 10px;
     width: 180px;
     height: 180px;
-    position:relative;
+  	position:relative;
 }
 
 /* Display Track Information */
@@ -60,7 +60,7 @@ body{
 /* Carousel CSS */
 
 /*  Created using http://desandro.github.io/3dtransforms/docs/carousel.html as a tutorial/guide
-I refactored and revamped just about all code from there, but it is possible a few variable names/css are the same */ 
+I refactored and revamped just about all code from there, but it is possible a few variable names/css are the same */	
 .playlist{
     margin-bottom: 40px;
 }
@@ -69,7 +69,7 @@ I refactored and revamped just about all code from there, but it is possible a f
     margin-bottom: 10px;
     height: 210px;
     -webkit-perspective: 1100px;
-            perspective: 1100px;    
+            perspective: 1100px;  	
 }
 
 #carousel {
@@ -95,15 +95,15 @@ I refactored and revamped just about all code from there, but it is possible a f
 
 
 #carousel > img {
-    position: absolute;
-    max-width: 200px;
-    max-height: 200px;
-    min-width:200px;
-    min-height:200px;
-    left: 10px;
-    top: 22px;
-    margin: 0 auto;
-    border: 2px solid;
+  	position: absolute;
+  	max-width: 200px;
+  	max-height: 200px;
+  	min-width:200px;
+  	min-height:200px;
+  	left: 10px;
+  	top: 22px;
+  	margin: 0 auto;
+  	border: 2px solid;
 }
 
 #previous { 
@@ -128,7 +128,7 @@ I refactored and revamped just about all code from there, but it is possible a f
 }
 
 .img {
-  position:relative;
+	position:relative;
 }
 
 .artistname {
@@ -138,7 +138,7 @@ I refactored and revamped just about all code from there, but it is possible a f
 
 .element:hover .grid_description {
   display: inline-block;
-  z-index:50;
+	z-index:50;
 }
 
 .grid_description {
@@ -146,11 +146,11 @@ I refactored and revamped just about all code from there, but it is possible a f
   position:absolute;
   top:15px;
   left:15px;
-  font-size:12px;
-  font-weight:bold;
-  color:white;
-  height:100%;
-  width:90%;
+	font-size:12px;
+	font-weight:bold;
+	color:white;
+	height:100%;
+	width:90%;
 }
 
 .grid_description p {
@@ -185,10 +185,10 @@ I refactored and revamped just about all code from there, but it is possible a f
 }
 
 .carousel-remove {
-  position:absolute;
-  height:27px;
-  width:27px;
-  margin-left:70px;
+	position:absolute;
+	height:27px;
+	width:27px;
+	margin-left:70px;
 }
 
 .element:hover .playtrack {
@@ -205,23 +205,23 @@ I refactored and revamped just about all code from there, but it is possible a f
   width:30px;   
 }
 .add_playlist {
-  display:none;
-  position:absolute;
-  bottom:8px;
-  right:45px;
-  height:37px;
-  width:37px;
+	display:none;
+	position:absolute;
+	bottom:10px;
+	right:50px;
+	height:27px;
+	width:27px;
 }
 .add_playlist_comments {
-  position: absolute;
-  bottom: 5.5px;
-  right: 115px;
-  height: 40px;
-  width: 40px;
+	position:absolute;
+	bottom:10px;
+	right:120px;
+	height:27px;
+	width:27px;
 }
 .element:hover .add_playlist {
-  display: inline-block;
-  z-index:51;
+	display: inline-block;
+	z-index:51;
 }
 
 .element:hover .comment {
@@ -230,40 +230,40 @@ I refactored and revamped just about all code from there, but it is possible a f
 }
 
 .rating {
-  width:100px;
+	width:100px;
 }
 
 #dp {
-  display: inline-block;
-    width: 250px;
-    height: auto;
-    padding: 4px;
-    line-height: 1.42857143;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+	display: inline-block;
+  	width: 250px;
+  	height: auto;
+  	padding: 4px;
+  	line-height: 1.42857143;
+  	background-color: #fff;
+  	border: 1px solid #ddd;
+  	border-radius: 4px;
+  	-webkit-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+  	transition: all .2s ease-in-out;
 }
 
 .comment_text { 
-  word-wrap: break-word; 
-  width:820px;
-  font-size:16px;
-  padding-top:2px;
+	word-wrap: break-word; 
+	width:820px;
+	font-size:16px;
+	padding-top:2px;
 }
 
 #album-tracks {
-  margin-top:30px;
+	margin-top:30px;
 }
 
 .input {
-  width:250px;
+	width:250px;
 }
 .input_dropdown {
-  width:250px;
-  margin-top:10px;
+	width:250px;
+	margin-top:10px;
 }
 #search_box {
  position: relative;
@@ -281,7 +281,7 @@ I refactored and revamped just about all code from there, but it is possible a f
 }
 
 #carousel:hover #information{
-  display:inline-block;
+	display:inline-block;
     background:#000000;
     opacity: 0.8;
     transition: all 0.5s;
@@ -289,7 +289,7 @@ I refactored and revamped just about all code from there, but it is possible a f
 }
 
 #information {
-  display:none;
+	display:none;
     position: relative;
     width: 255px;
     height: 255px;
@@ -336,5 +336,5 @@ I refactored and revamped just about all code from there, but it is possible a f
 }
 
 #email-message, #username-message, #password-message, #login-message {
-  font-size:12px;
+	font-size:12px;
 }

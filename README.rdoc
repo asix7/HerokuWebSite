@@ -11,8 +11,8 @@ An application to help new artists gain recognition and develop a fanbase. Allow
 * CSS 3
 * Javascript
 * Jquery
-* Bootstrap
 * Notify.js
+* Bootstrap
 * AJAX
 
 ==Application specifications:
