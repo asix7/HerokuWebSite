@@ -6,8 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-config.serve_static_assets = true
-
 module WebInfo2
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
