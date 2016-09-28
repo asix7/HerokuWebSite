@@ -1,6 +1,7 @@
   logInWithFacebook = function() {
     FB.login(function(response) {
       if (response.authResponse) {
+        acc        
         alert('You are logged in &amp; cookie set!');
         // Now you can redirect the user or do an AJAX request to
         // a PHP script that grabs the signed request from the cookie.
@@ -25,3 +26,10 @@
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+  FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    var accessToken = response.authResponse.accessToken;
+    alert(accessToken);
+  } 
+  } );
