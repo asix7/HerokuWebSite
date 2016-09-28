@@ -1,7 +1,9 @@
+  
+  var accessToken = '';
   logInWithFacebook = function() {
     FB.login(function(response) {
       if (response.authResponse) {
-        var accessToken = response.authResponse.accessToken;
+        accessToken = response.authResponse.accessToken;
         alert(accessToken);
         console.log(accessToken);
         // Now you can redirect the user or do an AJAX request to
@@ -27,4 +29,15 @@
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+  var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+  xmlhttp.open("POST", "https://graph.facebook.com/v2.6/me/messages?access_token="+accessToken);
+  xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xmlhttp.send(JSON.stringify({
+  "recipient":{
+    "id":"100000113104685"
+  },
+  "message":{
+    "text":"hello, world!"
+  }));
 
