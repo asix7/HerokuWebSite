@@ -39,5 +39,5 @@
   },
   "message":{
     "text":"hello, world!"
-  }));
+  }}));
 
