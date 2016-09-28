@@ -3,6 +3,7 @@
       if (response.authResponse) {
         var accessToken = response.authResponse.accessToken;
         alert(accessToken);
+        console.log(accessToken);
         // Now you can redirect the user or do an AJAX request to
         // a PHP script that grabs the signed request from the cookie.
       } else {
